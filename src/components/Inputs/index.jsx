@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../context/AuthContext";
+import InputStyleds from "./styles";
 
 function InputArea() {
 
@@ -11,6 +12,8 @@ function InputArea() {
   });
 
   return (
+    <InputStyleds>
+      <h1>Simule sua antecipação</h1>
       <form onSubmit={handleSubmit(calculate)}>
         <label htmlFor="">
           <h2>Informe o valor da venda</h2>
@@ -19,6 +22,7 @@ function InputArea() {
         <label htmlFor="">
           <h2>Em quantas parcelas</h2>
           <input type="text" id="installments" {...register("installments")}/>
+          <span>máximo de 12 parcelas</span>
         </label>
         <label htmlFor="">
           <h2>Informe o percentual de MDR</h2>
@@ -28,6 +32,7 @@ function InputArea() {
           calcular
         </button>
       </form>
+    </InputStyleds>
   );
 }
 

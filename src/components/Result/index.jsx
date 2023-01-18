@@ -7,22 +7,25 @@ function ResultArea() {
 
   return (
     <ResultAreaStyle>
-      <div>
-        <h3>Amanhã</h3>
-        {simulacao && <span>{simulacao[0]}</span>}
-      </div>
-      <div>
-        <h3>Em 15 dias</h3>
-        {simulacao && <span>{simulacao[1]}</span>}
-      </div>
-      <div>
-        <h3>Em 30 dias</h3>
-        {simulacao && <span>{simulacao[2]}</span>}
-      </div>
-      <div>
-        <h3>Em 90 dias</h3>
-        {simulacao && <span>{simulacao[3]}</span>}
-      </div>
+      <h2>Você receberá</h2>
+      <section>
+        <div>
+          <h3>Amanhã</h3>
+          {simulacao && <span>{`R$ ${simulacao[0]},00`}</span>}
+        </div>
+        <div>
+          <h3>Em 15 dias</h3>
+          {simulacao && <span>{`R$ ${simulacao[1]},00`}</span>}
+        </div>
+        <div>
+          <h3>Em 30 dias</h3>
+          {simulacao && <span>{`R$ ${simulacao[2]},00`}</span>}
+        </div>
+        <div>
+          <h3>Em 90 dias</h3>
+          {simulacao && <span>{`R$ ${simulacao[3]},00`}</span>}
+        </div>
+      </section>
     </ResultAreaStyle>
   );
 }

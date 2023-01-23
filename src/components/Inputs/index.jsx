@@ -18,6 +18,7 @@ function InputArea() {
         <label htmlFor="">
           <h2>Informe o valor da venda</h2>
           <input type="text" id="amount" {...register("amount")}/>
+          <span>entre R$999,00 e R$9.999,00</span>
         </label>
         <label htmlFor="">
           <h2>Em quantas parcelas</h2>
